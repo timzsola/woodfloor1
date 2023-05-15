@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title name</title>
+    <link rel="icon" href="./img/logo01.ico">
+    <link rel="stylesheet" href="./css/style copy.css">
+    <script src="./jQuery/js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            $('body').append('<a href="#" id="fixedTop"><img src="./img/angles-up-solid.svg" alt="title name"></a>');
+            //建立一個fixTop變數
+            let fixedTop = $('#fixedTop');
+            // console.log(fixedTop);
+            fixedTop.on('click', function () {
+                //用半秒鐘的時間捲動畫面到第一行
+                $('html,body').animate({ scrollTop: '0' }, 500);
+            });
+            //載入(網頁開啟時),捲動,調整視窗大小時
+            $(window).on('load scroll resize', function () {
+                //預設捲動高度超過100時出現TOP方塊
+                let showTop = 100;
+                //得到目前捲動的值
+                let curScrollTop = $(window).scrollTop();
+                //檢查是否超過預設高度,如果有顯示TOP方塊
+                if (curScrollTop > showTop) {
+                    // fixedTop.fadeIn(800);
+                    fixedTop.fadeIn('fast');
+                } else {
+                    //如果沒有隱藏TOP方塊
+                    // fixedTop.fadeOut(800);
+                    fixedTop.fadeOut('fast');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header id="topbar">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="./img/LOGO03.png" alt="title name">
+            </a>
+            <!-- <p> NATURE</p> -->
+        </h1>
+        <nav>
+            <div id="intro">
+
+                <ul class="menu">
+                    <li><a href="">品牌介紹</a></li>
+                    <li><a href="">產品資訊</a></li>
+                    <li><a href="">風格案例</a></li>
+                    <li><a href="">聯絡我們</a></li>
+                </ul>
+
+                <div class="icon">
+                    <a href="https://www.facebook.com/tien.tutorial/" target="_blank"><img src="./img/avatar.png"
+                            alt=""></a>
+                    <a href="https://www.facebook.com/tien.tutorial/" target="_blank"><img src="./img/grocery-store.png"
+                            alt=""></a>
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+    </header>
+
+    <main>
+        <!--輪播區  -->
+        <div id="banner">
+            <h2>輪播區</h2>
+        </div>
+
+        <!--品牌名稱  -->
+        <section id="production">
+            <h2>品牌名稱</h2>
+        </section>
+
+        <!--影片  -->
+        <section id="video">
+            <h2>影片</h2>
+        </section>
+
+        <!--風格  -->
+        <section id="sty">
+            <h2>風格</h2>
+        </section>
+
+
+    </main>
+    <footer>copyright</footer>
+
+</body>
+
+</html>

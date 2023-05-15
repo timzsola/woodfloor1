@@ -1,0 +1,283 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
+
+
+/* eric css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	/*不累+邊框與內距 RWD一定會加*/
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+		"蘋方-繁", "PingFang TC", "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 共用 */
+img {
+	display: block;
+	width: 100%;
+}
+
+/* 頁首區 */
+#topbar {
+	position: fixed;
+	/* position會將寬度轉換為內容等寬 */
+	top: 0;
+	left: 0;
+	z-index: 1;
+	/*讓topbar置頂*/
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/* 齊頭 */
+	/* padding: 20px; */
+	background-color: #F2D8CE;
+}
+
+#intro {
+	display: flex;
+}
+
+
+.logo {
+	width: 220px;
+}
+
+#topbar ul {
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+#topbar div {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+.icon a img {
+	display: block;
+	width: 35px;
+	height: 35px;
+
+}
+
+.menu a {
+	display: block;
+	text-decoration: none;
+	/* 取消a預設底線 */
+	color: black;
+	/* 修改瀏覽器預設的a字色 */
+	padding: 10px 10px;
+}
+
+.menu li::after {
+	content: "";
+	display: block;
+	width: 0%;
+	height: 2px;
+	background-color: #735C48;
+}
+
+.menu li:hover::after {
+	width: 100%;
+	transition: .35s;
+}
+
+/* 主要內容共用 */
+main>* {
+	/* 設定main第一層的所有元素 */
+	height: 100vh;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	/* 設定主軸方向為垂直 */
+	justify-content: center;
+	/* 設定主軸(垂直)置中 */
+	align-items: center;
+	/* 設定副軸(水平)方向置中 */
+}
+
+/* banner區 */
+#banner {
+	background-color: #fff4d7;
+}
+
+
+/* production區 */
+#production {
+	background-color: #F2EDF0;
+}
+
+/* 影片區 */
+#video {
+	background-color: #B5CAA0;
+}
+
+/* 風格區 */
+#sty {
+	background-color: #fff4d7;
+}
+
+/* 頁尾區 */
+footer {
+	background-color: #BC9F77;
+	padding: 50px;
+	/* 內距會包含背景顏色 */
+	text-align: center;
+}
+
+/* jquery */
+a {
+	color: skyblue;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#fixedTop {
+	color: #fff;
+	/* background-color: #000; */
+	padding: 15px 15px;
+
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	z-index: 99;
+	display: none;
+
+}
+
+#fixedTop img {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
